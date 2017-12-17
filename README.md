@@ -1,4 +1,4 @@
-#Roulette 360 App
+Roulette 360 App
 
 The purpose of this repo is to enable best practice code collaboration for the gptx360devteam.
 
