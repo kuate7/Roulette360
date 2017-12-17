@@ -7,7 +7,7 @@ userBalance = 500
 #The below code receives bet number and wager wager amount
 print("Welcome to Roulette! Good luck! Your starting balance is $500")
 print("A win on single number will multiply your bet by 37! Good luck!")
-userBetAmount = input("Please enter amount to bet: ")
+userBetAmount = input("Please enter a dollar amount to bet: ")
 userNumber = input("Please select a number between 0 and 36, you may also select 00: ")
 
 
