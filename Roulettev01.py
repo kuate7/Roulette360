@@ -1,11 +1,42 @@
 
 import random
 
-#test comment for branch tracking 
+#test comment for branch tracking
 
 def rouletteSpin():
     rouletteSpinNumber = random.randint(0,37)
     return rouletteSpinNumber
+
+def oddOrEven(rouletteSpinNumber):
+    if rouletteSpinNumber == 0:
+        return "none"
+    elif rouletteSpinNumber%2 == 0:
+        return "even"
+    else:
+        return "odd"
+
+def bottomOrTopHalf(rouletteSpinNumber):
+    if rouletteSpinNumber > 0 and rouletteSpinNumber <= 18:
+        return "1to18"
+    elif rouletteSpinNumber >=19 and rouletteSpinNumber <=36:
+        return "19to36"
+
+def thirds(rouletteSpinNumber):
+    if rouletteSpinNumber > 0 and rouletteSpinNumber <= 12:
+        return "1st-12"
+    elif rouletteSpinNumber >=12 and rouletteSpinNumber <=24:
+        return "2nd-12"
+    elif rouletteSpinNumber >=25 and rouletteSpinNumber <=36:
+        return "2rd-12"
+
+def colorbet(rouletteSpinNumber):
+    if rouletteSpinNumber in [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23,25, 27, 30, 32, 34 ,36]:
+        return "Red"
+    elif rouletteSpinNumber in [2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33]:
+        return "Black"
+
+
+
 
 
 #Initiates user balance
@@ -43,17 +74,17 @@ while continuePlay == "Y" or continuePlay == "y" and userBalance > 0:
             print("Your new balance is " + str(userBalance))
 
     #Start the bet 'single number'
-
-
-
-
     userNumber = input("Please select a number between 0 and 36, you may also select 00: ")
 
 
     #The below will generate a random number from 0 to 37. Number 37 will be mapped to 00
     rouletteSpinNumber = rouletteSpin()
 
-    print("The number spun is " + str(rouletteSpinNumber))
+    print("The number spun is: " + str(rouletteSpinNumber))
+    print("The odd or even result is: " + oddOrEven(rouletteSpinNumber))
+    print("The 1to18 or 19to36 result is: " + bottomOrTopHalf(rouletteSpinNumber))
+    print("The thirds result is: " + thirds(rouletteSpinNumber))
+    print("The color result is " + colorbet(rouletteSpinNumber))
 
     #This code will compare the userNumber against the rouletteSpinNumber and determine win or loss message to user.
     #The input vaue from the user must first be converted to an int to be able to comare numbers, else we'll see datatype error
