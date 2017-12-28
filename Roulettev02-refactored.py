@@ -151,6 +151,11 @@ while continuePlay == "Y" or continuePlay == "y" and userBalance > 0:
     #print("The dozen set result is: " + DozenSet(rouletteSpinNumber))
     #print("The color result is " + colorbet(rouletteSpinNumber))
 
+    #save rouletteSpinNumberMetadata to local file
+    with open(datetime.datetime.now().strftime("%b_%Y_%d") + " Roulette History.txt", "a") as history:
+        history.write(str(rouletteSpinNumberMetadata) + "\n")
+        history.close()
+
     #Below code consolidates metadata of spun numbers
     print("The metadata is " + str(rouletteSpinNumberMetadata))
 
