@@ -3,7 +3,15 @@ import random
 
 
 def rouletteSpin():
-    rouletteSpinNumber = random.randint(0, 37)
+    rouletteRange = range(0, 38, 1)
+    rouletteSpinNumber = random.sample(rouletteRange, 1)
+    if rouletteSpinNumber == [37]:
+        str_rand_item = str('00')
+        rouletteSpinNumber = int(str_rand_item)
+    else:
+        str_rand_item = str(rouletteSpinNumber).replace('[',"").replace(']',"")
+        print(str_rand_item)
+        rouletteSpinNumber = int(str_rand_item)
     return rouletteSpinNumber
 
 
