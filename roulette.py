@@ -175,7 +175,7 @@ while continuePlay == "Y" or continuePlay == "y" and userBalance > 0:
         history.close()
 
     # Below code consolidates metadata of spun numbers
-    print("The metadata is " + str(rouletteSpinNumberMetadata))
+    print("The winning values are " + str(rouletteSpinNumberMetadata))
 
     # This code will compare the userNumber against the rouletteSpinNumber and determine win or loss message to user.
     # The input vaue from the user must first be converted to an int to be able to comare numbers, else we'll see datatype error
