@@ -152,8 +152,12 @@ while continuePlay == "Y" or continuePlay == "y" and userBalance > 0:
 
     # The below will generate a random number from 0 to 37. Number 37 will be mapped to 00
     rouletteSpinNumber = rouletteSpin()
+    if rouletteSpinNumber == 37:
+        rouletteSpinNumberDisplay = "00"
+    else:
+        rouletteSpinNumberDisplay = rouletteSpinNumber
     rouletteSpinNumberMetadata = [
-        rouletteSpinNumber, oddOrEven(rouletteSpinNumber),
+        rouletteSpinNumberDisplay, oddOrEven(rouletteSpinNumber),
         bottomOrTopHalf(rouletteSpinNumber), DozenSet(rouletteSpinNumber),
         colorbet(rouletteSpinNumber)
     ]
