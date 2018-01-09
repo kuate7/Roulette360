@@ -76,7 +76,8 @@ while continuePlay == "Y" or continuePlay == "y" and userBalance > 0:
     print("3. Bottom of Top Half: 1to18 or 19-36")
     print("4. DozenSet: 1st12, 2nd12, 3rd12")
     print("5. Color: Red or Black")
-
+#if user enters any number other than the ones listed above, the game continues.
+# EX. user enters 100, game continues to display the winning value
     betType = int(input("Pick your bet: "))
 
     if betType == 1:
@@ -93,6 +94,7 @@ while continuePlay == "Y" or continuePlay == "y" and userBalance > 0:
 
                 # Accept single number bet
                 userNumber = input("Please select a number between 0 and 36, you may also select 00: ")
+# user starting amt. is 100, and bets 99, system gives new balance, then prompts to select option from bet types, but reverts back to asking for dollar amt. again
 
     if betType == 2:
         print("Odd or even bets pay 1 to 1! Good luck!")
